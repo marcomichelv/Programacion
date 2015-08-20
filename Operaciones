@@ -24,6 +24,15 @@ void main()
 	cout <<"El resultado DE LA RESTA es "<<D<<endl;
 	cout <<"El resultado DE LA MULTIPLICACION es "<<E<<endl;
 	cout <<"El resultado DE LA DIVISION es "<<F<<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;
+	cout <<endl;	
+	cout <<"Gracias!!!";
 	
 	getch();
 }
