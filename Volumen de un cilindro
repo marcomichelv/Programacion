@@ -1,0 +1,41 @@
+//PSEint
+//
+Proceso Volumen_de_un_cilndro
+	Escribir "Ingresar radio: ";
+	Leer R
+	Escribir "Ingresar altura: ";
+	Leer h;
+	
+	V = pi * R^2 * h
+	
+	Escribir "El volumen del cilindro es " V;
+FinProceso
+
+
+//C++
+//
+// volumen cilindro.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <math.h>
+
+ using namespace std;
+
+ void main()
+
+ {
+	 float V, R, h;
+	 #define Pi 3.1415926535897932384626433832795
+	 cout <<"Ingrese el radio: ";
+	 cin >>R;
+	 cout <<"Ingrese la altura: ";
+	 cin >>h;
+
+	 V = R*R * Pi * h;
+
+	 cout <<"El volumen del cilindro es: "<<V<<endl;
+	 getch();
+ }
