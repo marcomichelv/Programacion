@@ -11,9 +11,9 @@ using namespace std;			      //Permite que el teclado sea asignado para ingresar
 void main()                      //Cuerpo principal del programa
 {
    float area,base,altura;		   // Declaracion de las variables//
-   cout<<"Ingrese base: ";		   // Ingreso de daros con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la primer variable independiente//
+   cout<<"Ingrese base: ";		   // Ingreso de datos con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la primer variable independiente//
    cin>>base;					      // Lectura de variables//
-   cout<<"Ingrese altura: ";	   // Ingreso de daros con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la segunda variable independiente//
+   cout<<"Ingrese altura: ";	   // Ingreso de datos con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la segunda variable independiente//
    cin>>altura;					   // Lectura de variables//
    area = (base*altura)/2;		   // Calculo en conjunto de las variables//
    cout<<"El area es: "<<area;	// Muestra el resultado//
