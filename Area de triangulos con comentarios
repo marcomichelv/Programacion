@@ -2,9 +2,9 @@
 // Autor: Marco Michel
 // Fecha: 03/09/2015
 //
-#include "stdafx.h"				   //Libreria: Asignacion de librerias//
+#include "stdafx.h"				   //Libreria: Libreria de manejo de Visual Studio C++//
 #include "conio.h"				   //Libreria: Permite la utilizacion de getch()//
-#include <iostream>				   //Libreria:  
+#include <iostream>				   //Libreria: Permite utilizacion de "cin" y "cout"//
 
 using namespace std;			      //Permite que el teclado sea asignado para ingresar datos, y el monitor para salir (mostrar)// 
 
