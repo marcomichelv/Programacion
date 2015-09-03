@@ -3,19 +3,19 @@
 // Fecha: 03/09/2015
 //
 #include "stdafx.h"				   //Libreria: Libreria de manejo de Visual Studio C++//
-#include "conio.h"				   //Libreria: Permite la utilizacion de getch()//
-#include <iostream>				   //Libreria: Permite utilizacion de "cin" y "cout"//
+#include "conio.h"				   //Libreria: Permite manejar la entrada y la utilizacion de getch()//
+#include <iostream>				   //Libreria: Entrada y salida y ermite utilizacion de "cin" y "cout"//
 
 using namespace std;			      //Permite que el teclado sea asignado para ingresar datos, y el monitor para salir (mostrar)// 
 
 void main()                      //Cuerpo principal del programa
 {
    float area,base,altura;		   // Declaracion de las variables//
-   cout<<"Ingrese base: ";		   // Pide al usuario que introduzca el valor de la primer variable independiente//
+   cout<<"Ingrese base: ";		   // Ingreso de daros con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la primer variable independiente//
    cin>>base;					      // Lectura de variables//
-   cout<<"Ingrese altura: ";	   // Pide al usuario que introduzca el valor de la segunda variable independiente//
+   cout<<"Ingrese altura: ";	   // Ingreso de daros con mensaje y solicitud de datos. Pide al usuario que introduzca el valor de la segunda variable independiente//
    cin>>altura;					   // Lectura de variables//
    area = (base*altura)/2;		   // Calculo en conjunto de las variables//
    cout<<"El area es: "<<area;	// Muestra el resultado//
-   getch();						      // Permite salir presionando cualquier tecla//
+   getch();						      // Detiene la pantalla al finalizar el programa. Permite salir presionando cualquier tecla//
 }
