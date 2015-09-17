@@ -1,0 +1,50 @@
+// ciclorepetitivo.cpp : Defines the entry point for the console application.
+// Autor: Marco Michel Vaca
+// fecha: 17/09/15
+
+//do while//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	// Utilizando variable de control, b es la variables que determina la finalización.
+	float b,h,a,p;
+	char resp;
+	do
+	{
+		cout<<endl<<"Ingrese la base : ";
+	    cin>>b;
+		cout<< "Ingrese la altura: ";
+		cin>>h;
+
+		p= (b*h)/2;
+
+		cout<< "el area es: " <<p;
+		cout<<endl<< "Desea continuar: (y)es ";
+		cin>>resp;
+	}	while (resp=='y');
+	getch();
+}
+	
+//while//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	// Utilizando variable de control, b es la variables que determina la finalización.
+	float b,h,a,p;
+	cout<<"Ingrese la base : ";
+    cin>>b;
+	while (b!=0)
+	{ cout<< "Ingrese altura: ";
+	cin>>h;
+	p=(b*h)/2;
+	cout<< "El area es: " <<p;
+	cout<<endl<< "Ingrese la base:";
+	cin>>b;
+	}
+	getch();
