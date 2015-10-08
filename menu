@@ -1,0 +1,77 @@
+// menu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"//hace funcionar system
+#include "Math.h"
+
+using namespace std;
+
+
+	float potencia(float base,float exponente);
+	float suma(int N);
+	float area(float radio);
+		
+	void main()
+
+	{	float Potencia,b,e,Suma,N,r,Area,r;
+		int opcion;
+		#define pi=3.1416
+		do{
+			cout<<"\t\t Menu de operaciones \n";
+			cout<<"\t\t ==== \n";
+			cout<<"1. Potencia\n";
+			cout<<"2. Sumar los N numeros\n";
+			cout<<"3. Area del Circulo\n";
+			cout<<"0. Salir\n";
+			cout<<"Opcion: ";
+
+			switch (opcion)
+			{
+			case 1: cout<<"Ingrese la base de la potencia: ";
+					cin>>b;
+					cout<<"Ingrese exponente: ";
+					cin>>e;
+
+					Potencia=potencia(b,e);//Potencia=variable1; potencia=funcion; p=variable2
+					cout<<"La potencia es: "<<Potencia;
+					break;
+			case 2: cout<<"Ingrese N numeros a sumar: ";
+					cin>>N;
+					Suma=suma(N);
+					cout<<"La suma de los "<<N<<" numeros es: "<<Suma;
+					break;
+
+			case 3: cout<<"Ingrese radio: ";
+					cin>>r;
+					Area=area(pi,r);
+					cout<<"El area del circulo es: "<<Area;
+					break;
+
+			}
+			getch();
+			system("cls");
+
+		}while (opcion!=0);
+		 getch();
+	}
+
+	float potencia(float base,float exponente);
+
+	{ int i,e;
+	for(i=0,i<e,i++);
+	
+	return;
+	}
+	float suma(int N);
+	
+	return;
+	{
+	}
+	
+	return;
+	float area(float radio);
+	{
+	}
