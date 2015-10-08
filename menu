@@ -18,7 +18,6 @@ using namespace std;
 
 	{	float Potencia,b,e,Suma,N,r,Area,r;
 		int opcion;
-		#define pi=3.1416
 		do{
 			cout<<"\t\t Menu de operaciones \n";
 			cout<<"\t\t ==== \n";
@@ -46,7 +45,7 @@ using namespace std;
 
 			case 3: cout<<"Ingrese radio: ";
 					cin>>r;
-					Area=area(pi,r);
+					Area=area(r);
 					cout<<"El area del circulo es: "<<Area;
 					break;
 
@@ -75,3 +74,25 @@ using namespace std;
 	float area(float radio);
 	{
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
