@@ -1,0 +1,66 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+
+	float promedio(float promedio,suma);
+	float mayor(float mayor);
+	float suma(float suma);
+
+void main()
+{
+	float Promedio, p, numero, suma=0, Mayor, m, Suma, s;
+	int opcion,i, N;
+
+	do {
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. Promedio de N numeros"<<endl;
+		cout<<"2. Encontrar numero mayor"<<endl;
+		cout<<"3. Suma de los digitos de un numero"<<endl;
+		cout<<"0. Salir "<<endl;
+		cout<<"1. Promedio de N numeros"<<endl;
+		cout<<"Opcion: "<<endl;
+		cin>>opcion;
+
+		switch(opcion)
+		{
+		case 1: cout<<"Ingrese cantidad de numeros: ";
+				cin>>N;
+				Promedio=promedio(p,s);
+				cout<<"El promedio es: "<<Promedio;
+				break;
+		case 2: cout<<"Ingrese cantidad de numeros: ";
+				cin>>N;
+				for(i=1;i<=N;i++)
+				{
+					cout<<"Ingrese numero: ";
+					cin>>numero;
+					suma;
+				}
+				cout<<"El numero mayor es: "<<mayor;
+				break;
+
+		case 3: cout<<"Ingrese";
+				cin>>N;
+				break;
+		case 0: cout<<"Saliendo del menu"<<endl;
+				break;
+
+		default: cout<<"ERROR de opcion"<<endl;
+				break;
+		}
+
+		getch();
+		system("cls");
+
+	} while (opcion!=0);
+	getch();
+		
+		
+}
+
