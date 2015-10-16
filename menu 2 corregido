@@ -1,0 +1,85 @@
+//Autor: Marco Michel Vaca
+//Fecha: 15/10/15
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+{
+
+	float P, num, suma = 0, aux = 0;
+	int N, i, opcion,r;
+
+	do{
+		cout << "\t\t Menu \n" << endl;
+		cout << "\t\t ==============================\n" << endl;
+		cout << "1. Promedio" << endl;
+		cout << "2. Encontrar mayor" << endl;
+		cout << "3. Suma de digitos" << endl;
+		cout << "0. Salir" << endl;
+		cout << "Opcion: " << endl;
+		cin >> opcion;
+
+		switch (opcion)
+		{
+		case 1: cout << "Ingrese cantidad de numeros: "<<endl;
+			cin >> N;
+			for (i = 1; i <= N; i++)
+			{
+				cout << "Ingrese numero: " << endl;
+				cin >> num;
+
+				suma = suma + num;
+			}
+			P = suma / N;
+
+			cout << "El promedio de " << N << " es " << P;
+			break;
+		
+		case 2: cout << "Ingrese cantidad numeros: " << endl;
+			cin >> N;
+			for (i = 1; i <= N; i++)
+			{
+				cout << "Ingrese numero: " << endl;
+				cin >> num;
+				if (num > aux)
+					aux = num;
+
+			}
+			cout << "El mayor es: " << aux;
+			break;
+
+		case 3: cout << "Ingrese numero: " << endl;
+			cin >> N;
+			while (N > 0)
+			{
+				r = N % 10;
+				suma = suma + r;
+				N = N / 10;
+			}
+			cout << "La suma de los numeros es " << suma;
+			break;
+
+		case 0: cout << "Saliendo del menu " << endl;
+				break;
+		
+		default: cout << "ERROR de opcion" << endl;
+				 break;
+		}
+
+		_getch();//getch del switch
+		system("cls");
+	}
+
+	while (opcion != 0);
+	_getch(); //getch del do while
+
+
+
+}
+
