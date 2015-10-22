@@ -20,7 +20,6 @@ void imaginaria(float A, float B, float D, float &Xr, float &Xi);
 void main()
 {
 	float a,b,c,d,x1,x2,xr,xi;
-	int N;
 	char resp;
 	do //otra forma while(a!=0) {  }
 	{
