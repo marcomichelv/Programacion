@@ -1,0 +1,90 @@
+//Autor: Marco Michel Vaca 
+//Fecha: 22/10/15
+//cuadratica.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "Math.h"
+
+using namespace std;
+
+//prototipo
+float discriminante(float A, float B, float C);
+float unica (float A, float B);
+void real (float A, float B, float D, float &X1, float &X2);
+void imaginaria(float A, float B, float D, float &Xr, float &Xi);
+
+//cuerpo
+void main()
+{
+	float a,b,c,d,x1,x2,xr,xi;
+	int N;
+	char resp;
+	do //otra forma while(a!=0) {  }
+	{
+	cout<<"Ingrese valor de A: ";
+	cin>>a;
+	cout<<"Ingrese valor de B: ";
+	cin>>b;
+	cout<<"Ingrese valor de C: ";
+	cin>>c;
+
+	d=discriminante(a,b,c);
+
+	if(a==0)
+		cout<<"No hay solucion";
+	else
+
+		if(d==0)
+
+		{	x1= unica(a,b);
+			cout<<"La solucion unica es "<<x1;
+		}
+		else
+			if(d>0)
+				{
+					real(a,b,d,x1,x2);	//es void
+					cout<<"La solucion x1 es "<<x1<<endl;
+					cout<<"La solucion x2 es "<<x2<<endl;
+				}
+			else
+				{
+					imaginaria(a,b,d,xr,xi);	///es void
+					cout<<"La solucion x1 es "<<xr<<" + "<<xi<<"i"<<endl;
+					cout<<"La solucion x2 es "<<xr<<" - "<<xi<<"i"<<endl;
+				}
+	cout<<endl<< "Desea continuar: (y)es ";
+	cin>>resp;
+	}	while (resp=='y');
+	_getch();
+	}
+	
+float discriminante(float A, float B, float C)
+		{
+		float disc;
+		disc=pow(B,2)-4*A*C;
+		return disc;
+		}
+		
+float unica (float A, float B)
+		{
+			float uni;
+			uni= -B/(2*A);
+			return uni;
+		}
+		
+void real (float A, float B, float D, float &X1, float &X2)
+		{
+		X1= (-B+sqrt(D))/(2*A);
+		X2= (-B-sqrt(D))/(2*A);
+		}
+		
+void imaginaria (float A, float B, float D, float &Xr, float &Xi)
+		{
+		Xr = -B/(2*A);
+		Xi = (sqrt(-D))/(2*A);
+		}
+		
+	
