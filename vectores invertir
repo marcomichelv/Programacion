@@ -1,0 +1,69 @@
+//Autor: Marco Michel Vaca
+//Fecha: 29/10/15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+double promedio (double a[], int tamanho);
+void cargar (double a[], int tamanho);
+void mostrar (double a[], int tamanho);
+void invertir (double a[], int tamanho);
+void main()
+
+{
+	int N, aux;
+	double a[MAX], prom;
+	do
+	{
+	cout<<"Ingrese el numero de elementos maximo 100: "<<endl;
+	cin>>N;
+	}
+	while((N<=0)||(N>100));
+	{
+	cargar (a,N);
+	prom = promedio(a,N);
+	invertir(a,N);
+	mostrar(a,N);
+	}
+	_getch();
+
+}
+
+double promedio(double a[], int tamanho)
+{
+	double P, suma=0;
+	for(int i=0; i<tamanho; i++)
+	 suma=suma+a[i];
+	P=suma/tamanho;
+	return P;
+	
+}
+
+void invertir (double a[], int tamanho)
+{
+	int aux;
+	for (int i=0;i<tamanho/2;i++)
+	{
+	aux=a[i];
+	a[i]=a[tamanho-1-i];
+	a[tamanho-1-i]=aux;
+	}
+}
+void cargar (double a[], int tamanho)
+{
+	for(int i=0; i<tamanho; i++)
+	{	
+		cout<<"a["<<i<<"]: "<<endl;
+		cin>> a[i];
+	}
+}
+void mostrar (double a[], int tamanho)
+{
+	for(int i=0; i<tamanho; i++)
+		cout<<"a["<<i<<"]: "<<a[i]<<endl;
+}
+
