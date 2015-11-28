@@ -1,0 +1,138 @@
+//Autor: Marco Michel Vaca
+//       Estefany Meneses Soto
+//Tema: YOGA SOLUTION
+//Fecha: 28/11/15
+
+//El sgiguiente programa muestra lo que seria la interfaz, esta incompleto.
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+{
+
+	float peso, altura;
+	int opcion, factor, edad;
+
+	do{
+		cout << "\t\t\t YOGA SOLUTION \n" << endl;
+		cout << "\t\t ==============================\n" << endl;
+		cout << "Ingrese la opcion que desee: " << endl;
+		cout << "1. Donde practicar yoga" << endl;
+		cout << "2. Conozca mas sobre el yoga" << endl;
+		cout << "3. Calculadora de calorias" << endl;
+		cout << "0. Salir" << endl;
+		cout << "Opcion: " << endl;
+		cin >> opcion;
+
+		switch (opcion)
+		{
+		case 1:	do{
+					cout << "Ingrese la zona que desee: " << endl;
+					cout << "\t 1. Zona Norte" << endl;
+					cout << "\t 2. Zona Sur" << endl;
+					cout << "\t 3. Zona Este" << endl;
+					cout << "\t 4. Zona Oeste" << endl;
+					cout << "\t 5. Zona Centro" << endl;
+					cout << "\t 0. Salir" << endl;
+					cout << "Opcion: " << endl;
+					cin >> opcion;
+					switch (opcion)
+					{
+					case 1:;
+						break;
+					case 2:;
+						break;
+					case 3:;
+						break;
+					case 4:;
+						break;
+					case 5:;
+						break;
+					case 0: cout << "Saliendo del menu " << endl;
+						break;
+
+					default: cout << "ERROR de opcion" << endl;
+						break;
+					}
+
+					_getch();
+					system("cls");
+				  }
+
+			while (opcion != 0);
+
+			_getch();
+			
+			break;
+
+
+
+		case 2:;
+			break;
+
+		case 3:cout << "Ingrese sexo: " << endl;
+			cout << "1. Masculino" << endl;
+			cout << "2. Femenino" << endl;
+			cout << "0. Salir" << endl;
+			do{
+				switch (opcion)
+				{
+				case 1:	  cout << "Ingrese su edad" << endl;
+					cin >> edad;
+					cout << "Ingrese su altura: " << endl;
+					cin >> altura;
+					cout << "Ingrese su peso en Kg: " << endl;
+					cin >> peso;
+					cout << "Ingrese su factor de actividad: ";
+					cin >> factor;
+					break;
+
+
+				case 2: cout << "Ingrese su edad" << endl;
+					cin >> edad;
+					cout << "Ingrese su altura: " << endl;
+					cin >> altura;
+					cout << "Ingrese su peso: " << endl;
+					cin >> peso;
+					cout << "Ingrese su factor de actividad: ";
+					cin >> factor;
+					break;
+				case 0:   cout << "Saliendo..." << endl;
+					break;
+				default: cout << "ERROR de opcion" << endl;
+					break;
+				}
+				_getch();
+				system("cls");
+			} while (opcion != 0);
+			_getch();
+
+			break;
+		
+		case 0:cout << "Saliendo del menu" << endl;
+			break;
+
+		default: cout << "ERROR DE OPCION" << endl;
+			break;
+		}
+
+
+				_getch();
+				system("cls");
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+} while (opcion != 0);
+	_getch();
