@@ -1,0 +1,635 @@
+//Autores: Marco Michel Vaca
+//         Estefany Meneses Soto
+//Tema: PROYECTO FINAL: Yoga Solution
+//Materia: INTRODUCCION A LA PROGRAMACION
+//Docente Guia: Mgs. Karem Infantas Soto
+// 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+int menuprincipal();
+int menuopcion1();
+int menuopcion2();
+int menuopcion3();
+float ritmobasalhombre(float edad, float peso, float altura);
+float caloriashombre(float ritmobasalhombre);
+float ritmobasalmujer(float edad, float peso, float altura);
+float caloriasmujer(float ritmobasalmujer);
+
+void main()
+{
+	system("color 6F");
+
+	int opcion, actividad;
+	float Ritmobasalhombre, Ritmobasalmujer, e, p, a, Caloriashombre, Caloriasmujer, pesoactualhombre, pesoactualmujer;
+
+	do{
+		opcion = menuprincipal();
+
+		switch (opcion)
+		{
+		case 1:	do{
+					opcion = menuopcion1();
+					switch (opcion)
+					{
+					case 1: cout << "\t\t\t Zona Norte \n " << endl;
+						cout << "\t\t============================ \n " << endl;
+
+						cout << "1. Rolea Center: Yoga-Yoghismo" << endl << endl;
+						cout << "  Direccion: Equipetrol Norte Calle J Este # 120" << endl;
+						cout << "  Horario: Lunes-Miercoles-Viernes: 8:00-9:30 ; 17:00 - 18:00" << endl;
+						cout << "  Precio: 400 Bs. " << endl;
+						cout << "  Tel.: (+591) 3447525 - 3454797 - 70203144 " << endl;
+						cout << "  Pagina web: www.roleacenter.com " << endl << endl;
+
+						cout << "2. Alas y raices" << endl << endl;
+						cout << "  Direccion: Radial 26, Calle Sebol #26, Zona Mercado Belen" << endl;
+						cout << "  Horario: Lunes: 09:00 - 10:30 ; 19:30 - 21:00" << endl;
+						cout << "           Martes: 09:00 - 10:30 ; 20:00 - 21:00" << endl;
+						cout << "           Miercoles: 09:00 - 10:30 ; 19:30 - 21:00" << endl;
+						cout << "           Jueves: 09:00 - 10:30 ; 20:00 - 21:00" << endl;
+						cout << "           Viernes: 09:00 - 10:30 ; 19:30 - 21:00" << endl;
+						cout << "  Precio: 250 Bs. " << endl;
+						cout << "  Tel.: (+591) 78087396 - 75503017 " << endl;
+						cout << "  Pagina web: www.facebook.com/pages/Somos-Alas-y-Raices " << endl << endl;
+
+						cout << "3. Centro Amaya" << endl << endl;
+						cout << "  Direccion: Av. Alemana Calle Motacú 2370" << endl;
+						cout << "  Horario: Lunes - Miércoles - Viernes: 8:00 - 9:15" << endl;
+						cout << "  Precio: 350 Bs. " << endl;
+						cout << "  Tel.: (+591) 78002288 - 77058240 " << endl;
+						cout << "  Pagina web: www.facebook.com/pages/Amaya-Centro - www.amayacentro.com " << endl << endl;
+
+
+						cout << "4. Centro Internacional Yoga Yoghismo " << endl << endl;
+						cout << "  Direccion: Av. Beni entre 3er y 4to anillo entrando por la calle 3 Oeste, Biblioteca Hamacas" << endl;
+						cout << "  Horario: Martes - Jueves: 18:30 - 20:00 " << endl;
+						cout << "  Precio: Aporte voluntario " << endl;
+						cout << "  Tel.: (+591) 3-33482792 - 71311673 - 71631410 - 77331972 " << endl;
+						cout << "  Instructor: Prof. Alicia Hoyos - aliciahoyos@hotmail.com " << endl;
+						cout << "              Prof. Detlef Rau - det_65@yahoo.com " << endl;
+						cout << "  Pagina web: www.yoghismo.org " << endl << endl;
+
+						cout << "5. Hot Yoga - Body Masters " << endl << endl;
+						cout << "  Direccion: Gimnasio Body Master Av. San Martin (Supermecado Fidalga 3er Piso)" << endl;
+						cout << "  Horario: Lunes - Miercoles - Viernes: 17:00 - 18:00 " << endl;
+						cout << "  Precio: 300 Bs" << endl;
+						cout << "  Tel.: (+591) 3-3444682 " << endl;
+						cout << "  Pagina web: www.facebook.com/BodyMastersBolivia" << endl << endl;
+
+						cout << "6. Surya Yoga Studio " << endl << endl;
+						cout << "  Direccion: Avenida Alemana calle Los Junos 3010" << endl;
+						cout << "  Horario: Lunes - Miercoles - Viernes: 08:00 - 09:00 " << endl;
+						cout << "           Martes - Jueves: 16:30 - 17:30 " << endl;
+						cout << "  Precio: 260 Bs" << endl;
+						cout << "  Tel.: (+591) 65885867 " << endl;
+						cout << "  Pagina web: www.facebook.com/pages/Surya-Yoga-Studio " << endl << endl;
+
+						cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+						break;
+
+					case 2:	cout << "\t\t\t Zona Sur \n " << endl;
+						cout << "\t\t============================ \n " << endl;
+
+						cout << "1. Centro Internacional Yoga Yoghismo" << endl << endl;
+						cout << "  Direccion: Barrio Urbari Calle Igmiri 217" << endl;
+						cout << "  Horario: Martes - Jueves: 17:30 a 19:00 ; 18:30 - 20:00" << endl;
+						cout << "  Precio: Aporte voluntario " << endl;
+						cout << "  Tel.: (591) 3-3482792 - 65892594 - 71311673 - 71631410 - 77331972 " << endl;
+						cout << "  Pagina web: www.yoghismo.org " << endl << endl;
+
+						cout << "2. Vitalis Energy Bolivia" << endl << endl;
+						cout << "  Direccion: Km 18 sobre Carretera Antigua a La Guardia, Barrio La Victoria" << endl;
+						cout << "  Horario: Martes - Jueves: 17:30 - 19:00 ; 18:30 - 20:00" << endl;
+						cout << "  Tel.: (591)3-3840058 - 77396829 " << endl;
+						cout << "  Pagina web: www.vitalisenergy-cme.org/ " << endl << endl;
+
+						cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+						break;
+
+					case 3: cout << "\t\t\t Zona Este \n " << endl;
+						cout << "\t\t============================ \n " << endl;
+
+						cout << "1. Centro de Yoga instructor Gabriel Arrazola" << endl << endl;
+						cout << "  Direccion: Av. Paragua entre 2do y 3er anillo - Tambien Servicio a domicilio" << endl;
+						cout << "  Horario: Lunes - Miercoles - Viernes: 08:00 - 09:00" << endl;
+						cout << "  Horario: Martes - Jueves: 17:00 a 18:00" << endl;
+						cout << "  Precio: 280 Bs. " << endl;
+						cout << "  Tel.: (+591) 72035292 - 69030080 " << endl;
+						cout << "  Pagina web: www.elyogadelcontacto.blogspot.com - www.gabrielarrazola.blogspot.com " << endl;
+						cout << "  Correo: galazol@yahoo.es " << endl << endl;
+
+						cout << "2. Centro de Yoga instructora Claudia Maldonado" << endl << endl;
+						cout << "  Direccion: Direccion: Barrio Equipetrol Calle 8 Este (Loma Alta) #3230" << endl;
+						cout << "  Horario: Lunes - Miércoles - Viernes: 8:00 - 9:15" << endl;
+						cout << "  Precio: 350 Bs. " << endl;
+						cout << "  Tel.: (+591) 78002288 - 77058240 " << endl;
+						cout << "  Pagina web: www.facebook.com/pages/Amaya-Centro - www.amayacentro.com " << endl << endl;
+
+						cout << "3. Potenciar Humano: Kundalini Yoga con Susanne Hansen" << endl << endl;
+						cout << "  Direccion: Av. Alemana entre 3er y 4to anillo Calle 10 Este #3185" << endl;
+						cout << "  Horario: Martes - Jueves: 20:00 - 21:45 " << endl;
+						cout << "           Martes - Viernes:  08:30 - 10 : 00 " << endl;
+						cout << "  Precio: 50 - 180 - 360 Bs. " << endl;
+						cout << "  Tel.: (+591) 77655153 " << endl;
+						cout << "  Pagina web: www.facebook.com/Psicoterapia-Positiva-y-Kundalini-Yoga-403023406421216/ " << endl << endl;
+
+						cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+						break;
+
+					case 4:	cout << "\t\t\t Zona Oeste \n " << endl;
+						cout << "\t\t============================ \n " << endl;
+
+						cout << "1. Yoga Shala" << endl << endl;
+						cout << "  Direccion: Equipetrol Calle Tucumán 6 Oeste, Casa # 0" << endl;
+						cout << "  Horario: Lunes: 07:30 - 09:00 ; 10:00 - 11:00 ; 18:40 - 19:40" << endl;
+						cout << "           Martes: 09:00 - 10:00" << endl;
+						cout << "           Miercoles: 07:30 - 09:00 ; 18:40 - 19:40" << endl;
+						cout << "           Jueves: 09:00 - 10:00" << endl;
+						cout << "           Viernes: 07:30 - 09:00 ; 10:00 - 11:00 ; 18:40 - 19:40" << endl;
+						cout << "           Sabado: 09:00 - 10:00" << endl;
+						cout << "  Precio: 350 Bs. " << endl;
+						cout << "  Tel.: (+591) 3-3356444  " << endl;
+						cout << "  Pagina web: plus.google.com/104086953786939856551/about " << endl << endl;
+
+						cout << "2. Centro de los 5 elementos" << endl << endl;
+						cout << "  Direccion: Sirari Calle claveles #530" << endl;
+						cout << "  Horario: Martes - Jueves: 08: - 09:00" << endl;
+						cout << "  Precio: 380 Bs. " << endl;
+						cout << "  Tel.: (+591) 3-3419996 - 721-23120   721-77582 " << endl;
+						cout << "  Pagina web: centrocincoelementos.weebly.com/ - www.facebook.com/centrodelos5elementos " << endl << endl;
+
+						cout << "3. A-ha Yoga - Ivanna Vega" << endl << endl;
+						cout << "  Direccion: Colinas del Urubo, La Cañada" << endl;
+						cout << "  Horario: Lunes: 06:00 - 7:15" << endl;
+						cout << "           Martes: 06:00 - 7:15 ; 08:30 - 10:00 ; 20:00 - 21:00" << endl;
+						cout << "           Miercoles: 06:00 - 7:15 " << endl;
+						cout << "           Jueves: 06:00 - 7:15 ; 08:30 - 10:00 ; 20:00 - 21:00" << endl;
+						cout << "           Viernes: 08:30 - 10:00" << endl;
+						cout << "           Sabado: 16:00 - 17:30" << endl;
+						cout << "  Precio: 500 Bs. " << endl;
+						cout << "  Tel.: (+591) 78467857 " << endl;
+						cout << "  Pagina web: www.ivannavega.com - www.facebook.com/aha.poweryoga " << endl << endl;
+
+						cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+						break;
+
+					case 5:	cout << "\t\t\t Zona Centro \n " << endl;
+						cout << "\t\t============================ \n " << endl;
+
+						cout << "1. Sivananda Yoga Santa Cruz" << endl << endl;
+						cout << "  Direccion: Calle Junin 271 (a dos cuadras de la plaza 24 de septiembre)" << endl;
+						cout << "  Horario: Lunes: 08:00 - 9:30 ; 19:30 - 21:00 ; 21:00 - 22:00 (Meditacion)" << endl;
+						cout << "           Martes: 10:00 - 11:30 ; 19:30 - 21:00" << endl;
+						cout << "           Miercoles: 08:00 - 09:30 ; 19:30 - 21:00" << endl;
+						cout << "           Jueves: 19:30 - 21:00" << endl;
+						cout << "           Viernes: 08:00 - 09:30" << endl;
+						cout << "           Sabado: 10:00 - 11:30" << endl;
+						cout << "  Precio: 200 Bs. " << endl;
+						cout << "  Tel.: (+591) 3-3331508 - 77060472 " << endl;
+						cout << "  Pagina web: www.sivanandascz.com - www.facebook.com/sivanandascz" << endl << endl;
+
+						cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+						break;
+					case 6:
+						break;
+					case 0: cout << "Presione cualquier tecla para continuar... " << endl;
+						break;
+
+					default: cout << "ERROR de opcion" << endl;
+						break;
+					}
+
+					_getch();
+					system("cls");
+		}
+
+		while (opcion != 0 && opcion != 6);
+		break;
+
+		case 2: do{
+					opcion = menuopcion2();
+
+					switch (opcion)
+					{
+					case 1:	cout << "\t\t\t Historia del yoga \n " << endl;
+							cout << "\t\t================================= \n " << endl;
+							cout << "Una definicion epistemologica del yoga del original ''juk'', nos indica que la palabra original quiere decir ''union'' de nuestro ser fisico y mental, con nuestro ser espiritual. Sin embargo, ha sido definido en textos sagrados tambien como ''fijar la atencion en un punto'', es decir que su definicion primordial puede estar relacionada con la practica meditativa. Una tercera interpretacion es la relacion con la palabra ''yugo'', que puede estar relacionada con el concepto de disciplina espiritual y practica." << endl << endl;
+							cout << "El yoga existe desde tiempos indeterminados, pero en todo caso mas de 5000 años. Es una tradicion originada en el Valle del Indo y que se dice, fue revelada por la divinidad a los sadhus (ascetas)." << endl;
+							cout << "En el año 2500 AC se menciona el yoga en los Vedas, las escrituras sagradas, y en especial en los Upanishads, la ultima parte de los Vedas (articulo en ingles) donde se fundamenta el conocimiento yoguico y de donde viene el Vedanta: el cuerpo filosofico del yoga. El Bhagavad Gita (en ingles), que data de alrededor del siglo VI AC y que forma parte del poema epico Mahabharata es un texto reconocido de la literatura de esta ciencia.";
+							cout << "En el siglo III AC, Patanjali escribio los Yoga Sutras, reconocidos tambien como textos decisivos en la interpretacion contemporanea del yoga. Como ha sido un conocimiento en permanente evolucion, en la actualidad hay un amplio numero de escuelas, corrientes e interpretaciones del yoga." << endl << endl;
+							cout << "Presione cualquier tecla para elegir otra opcion... " << endl;
+							_getch();
+							break;
+					case 2:	cout << "\t\t\t Estilos de yoga \n " << endl;
+							cout << "\t\t================================= \n " << endl;
+							cout << "                ANUSARA YOGA        YOGA NIDRA" << endl;
+							cout << "                HATHA YOGA uno de los mas practicados         YOGA DE LA RISA" << endl;
+							cout << "                KUNDALINI YOGA      YOGA INTEGRAL" << endl;
+							cout << "                BIKRAM YOGA         ANANDA YOGA" << endl;
+							cout << "                ASHTANGA YOGA       NADA YOGA" << endl;
+							cout << "                KRIPALU YOGA        BHAKTI YOGA" << endl;
+							cout << "                POWER YOGA          YOGA RESTAURATIVO" << endl;
+							cout << "                BHARATA YOGA        YOGA AYURVEDICO" << endl;
+							cout << "                YOGA DESNUDO        KRIPALU YOGA" << endl;
+							cout << "                VINIYOGA            SIVANANDA YOGA" << endl;
+							cout << "                IYENGAR YOGA        YOGA ACUATICO" << endl;
+							cout << "                YOGA AEREO          ACROYOGA" << endl;
+							cout << "                DRU YOGA            VINYASA YOGA" << endl;
+							cout << "                HOT YOGA            YOGA TERAPEUTICO" << endl << endl;
+							cout << "Presione cualquier tecla para elegir otra opcion... " << endl << endl;
+							_getch();
+						break;
+					case 3:	cout << "\t\t\t Yoguis destacados \n " << endl;
+							cout << "\t\t================================= \n " << endl << endl;
+							cout << "          PATANHJALI                  SWAMI BUA " << endl;
+							cout << "          RAMAKRISHNA                 GOPI KRISHNA " << endl;
+							cout << "          SWAMI VIVEKANANDA           SWAMI SATCHIDANANDA " << endl;
+							cout << "          SRI AUROBINDO               MAHARISHI MAHESH YOGI " << endl;
+							cout << "          SWAMI SIVANANDA             P.R. SARKAR" << endl;
+							cout << "          TIRUMALAI KRISHNAMACHARYA   SWAMI GURU DEVANAND SARASWATI JI MAHARAJ " << endl;
+							cout << "          INDRA DEVI                  NEEM KAROLI BABA " << endl;
+							cout << "          PARAMAHANSA YOGANANDA       SWAMI VISHNU DEVANANDA" << endl;
+							cout << "          KANTI DEVI                  SWAMI MAHADEVANANDA" << endl;
+							cout << "          MATA AMRITANANDAMAYI        MADRE SHAKTIANANDA" << endl << endl;
+							cout << "Presione cualquier tecla para elegir otra opcion... " << endl << endl;
+							_getch();
+
+						break;
+					case 4: cout << "\t\t\t Beneficios del yoga \n " << endl;
+							cout << "\t\t================================= \n " << endl;
+							cout << "                Aptitud fisica durante todo el anho." << endl;
+							cout << "                La perdida de peso." << endl;
+							cout << "                El alivio de tension." << endl;
+							cout << "                La paz interior." << endl;
+							cout << "                Mejora la inmunidad." << endl;
+							cout << "                El vivir con mayor conciencia." << endl;
+							cout << "                Mejores relaciones." << endl;
+							cout << "                Aumento de la energia." << endl;
+							cout << "                Mejor flexibilidad y postura." << endl;
+							cout << "                Mejor intuicion." << endl << endl;
+							cout << "Presione cualquier tecla para elegir otra opcion... " << endl << endl;
+							_getch();
+						break;
+					case 5:
+						break;
+					case 0: cout << "Presione cualquier tecla para continuar..." << endl;
+						break;
+					default:cout << "ERROR de opcion" << endl;
+						break;
+					}
+					system("cls");
+		          } 
+				  while (opcion != 0 && opcion != 5);
+			      break;
+
+		case 3: do{
+					opcion = menuopcion3();
+
+					switch (opcion)
+					{
+
+					case 1: do{		//hombre	
+								cout << endl << "Ingrese nivel de actividad segun la lista: " << endl << endl;
+								cout << "	1. Sedentaria " << endl;
+								cout << "	2. Ligera " << endl;
+								cout << "	3. Moderada " << endl;
+								cout << "	4. Dinamica " << endl;
+								cout << "	5. Muy dinamica " << endl;
+								cout << "	0. Volver " << endl << endl;
+								cout << "Nivel de actividad: " << endl << endl;
+								cin >> actividad;
+								switch (actividad)
+								{
+								case 1: //sedentaria rbm = (*1.2)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalhombre = ritmobasalhombre(e, p, a);
+									Caloriashombre = caloriashombre(Ritmobasalhombre);
+									pesoactualhombre = Caloriashombre*1.2;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualhombre - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 2: //ligera rbm = (*1.375)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalhombre = ritmobasalhombre(e, p, a);
+									Caloriashombre = caloriashombre(Ritmobasalhombre);
+									pesoactualhombre = Caloriashombre*1.375;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualhombre - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 3://moderada(*1.55)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalhombre = ritmobasalhombre(e, p, a);
+									Caloriashombre = caloriashombre(Ritmobasalhombre);
+									pesoactualhombre = Caloriashombre*1.55;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualhombre - 500 << " cal" << endl << endl;
+									_getch();
+
+									break;
+
+								case 4://dinamica(*1.725)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalhombre = ritmobasalhombre(e, p, a);
+									Caloriashombre = caloriashombre(Ritmobasalhombre);
+									pesoactualhombre = Caloriashombre*1.725;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualhombre - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 5://muy dinamica(*1.9)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalhombre = ritmobasalhombre(e, p, a);
+									Caloriashombre = caloriashombre(Ritmobasalhombre);
+									pesoactualhombre = Caloriashombre*1.9;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualhombre << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualhombre - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 0: cout << "Presione cualquier tecla para continuar... " << endl;
+									break;
+
+								default: cout << "ERROR de opcion" << endl;
+									break;
+								}
+
+								system("cls");
+
+					} while (actividad != 0 && opcion != 5);
+						system("cls");
+
+						break;
+
+					case 2: do{		//mujer
+								cout << endl << "Ingrese nivel de actividad segun la lista: " << endl << endl;
+								cout << "	1. Sedentaria " << endl;
+								cout << "	2. Ligera " << endl;
+								cout << "	3. Moderada " << endl;
+								cout << "	4. Dinamica " << endl;
+								cout << "	5. Muy dinamica " << endl;
+								cout << "	0. Volver " << endl << endl;
+								cout << "Nivel de actividad: " << endl;
+								cin >> actividad;
+								switch (actividad)
+								{
+								case 1: //sedentaria rbm = (*1.2)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalmujer = ritmobasalmujer(e, p, a);
+									Caloriasmujer = caloriasmujer(Ritmobasalmujer);
+									pesoactualmujer = Caloriasmujer*1.2;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualmujer - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 2: //ligera rbm = (*1.375)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalmujer = ritmobasalmujer(e, p, a);
+									Caloriasmujer = caloriasmujer(Ritmobasalmujer);
+									pesoactualmujer = Caloriasmujer*1.375;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualmujer - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 3://moderada(*1.55)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalmujer = ritmobasalmujer(e, p, a);
+									Caloriasmujer = caloriasmujer(Ritmobasalmujer);
+									pesoactualmujer = Caloriasmujer*1.55;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualmujer - 500 << " cal" << endl << endl;
+									_getch();
+
+									break;
+
+								case 4://dinamica(*1.725)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalmujer = ritmobasalmujer(e, p, a);
+									Caloriasmujer = caloriasmujer(Ritmobasalhombre);
+									pesoactualmujer = Caloriasmujer*1.725;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualmujer - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 5://muy dinamica(*1.9)
+									cout << endl << "Edad: ";
+									cin >> e;
+									cout << "Peso en kg: ";
+									cin >> p;
+									cout << "Altura en cm: ";
+									cin >> a;
+									Ritmobasalmujer = ritmobasalmujer(e, p, a);
+									Caloriasmujer = caloriasmujer(Ritmobasalmujer);
+									pesoactualmujer = Caloriasmujer*1.9;
+
+									cout << endl << "Las calorias minimas que necesitas de acuerdo a tu talla y peso (Gasto diario de tu metabolismo basal) es: " << endl << endl << Ritmobasalmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias reales que necesitas para mantener tu peso actual es: " << endl << endl << pesoactualmujer << " cal" << endl << endl;
+									cout << "La cantidad de calorias para la perdida de grasa es: " << endl << endl << pesoactualmujer - 500 << " cal" << endl << endl;
+									_getch();
+									break;
+
+								case 0: cout << "Presione cualquier tecla para continuar... " << endl;
+									break;
+
+								default: cout << "ERROR de opcion" << endl;
+									break;
+								}
+
+								system("cls");
+
+					} while (actividad != 0 && opcion != 5);
+						system("cls");
+
+						break;
+
+					case 0: cout << "Presione cualquier tecla para continuar " << endl;
+						break;
+
+					default: cout << "ERROR de opcion" << endl;
+						break;
+					}
+					system("cls");
+		           } while (opcion != 0);
+				   break;
+			
+
+		case 0:	cout << "Presione cualquier tecla para continuar..." << endl;
+			break;
+
+		default: cout << "ERROR de opcion" << endl;
+			break;
+		}
+
+		system("cls");
+		//fin case
+	} while (opcion != 0);
+
+}
+
+int menuprincipal()
+{
+	int o;
+	cout << "\t\t =============================  \n";
+	cout << "\t\t =                           =  \n";
+	cout << "\t\t = \t YOGA SOLUTION \t     =" << endl; //alt+186; alt+179
+	cout << "\t\t =                           =   \n";
+	cout << "\t\t =============================  \n" << endl;
+	cout << "YOGA SOLUTION... el yoga crucenho a tu alcance..." << endl << endl;
+	cout << "Elija la opcion que desee: " << endl << endl;
+	cout << "1. Donde practicar yoga" << endl;
+	cout << "2. Conozca mas sobre el yoga" << endl;
+	cout << "3. Calculadora de calorias" << endl;
+	cout << "0. Salir" << endl << endl;
+	cout << "Opcion: " << endl << endl;
+	cin >> o;
+
+	return o;
+}
+
+int menuopcion1()
+{
+	int o;
+	cout << endl << "Elija la zona de interes: " << endl << endl;
+	cout << "\t 1. Zona Norte" << endl;
+	cout << "\t 2. Zona Sur" << endl;
+	cout << "\t 3. Zona Este" << endl;
+	cout << "\t 4. Zona Oeste" << endl;
+	cout << "\t 5. Zona Centro" << endl;
+	cout << "\t 6. Volver" << endl;
+	cout << "\t 0. Salir" << endl << endl;
+	cout << "Opcion: " << endl << endl;
+	cin >> o;
+	return o;
+}
+
+int menuopcion2()
+{
+	int o;
+	cout << endl << "1. Historia" << endl;
+	cout << "2. Estilos de yoga" << endl;
+	cout << "3. Yoguis destacados" << endl;
+	cout << "4. Beneficios del yoga" << endl;
+	cout << "5. Volver" << endl;
+	cout << "0. Salir" << endl;
+	cout << endl;
+	cout << "Opcion: " << endl;
+	cout << endl;
+	cin >> o;
+	return o;
+}
+
+int menuopcion3()
+{
+	int o;
+
+	cout << endl << "Elija el sexo: " << endl << endl;
+	cout << "1. Masculino" << endl;
+	cout << "2. Femenino" << endl;
+	cout << "0. Salir" << endl << endl;
+	cout << "Opcion: " << endl << endl;
+	cin >> o;
+
+	return o;
+
+}
+
+float ritmobasalhombre(float edad, float peso, float altura)
+{
+	float r;
+	r = 66 + (13.7*peso) + (5 * altura) - (6.8*edad);
+	return r;
+}
+float caloriashombre(float ritmobasalhombre)
+{
+	float c;
+	c = ritmobasalhombre;
+	return c;
+}
+
+float ritmobasalmujer(float edad, float peso, float altura)
+{
+	float r;
+	r = 655 + (9.6*peso) + (1.8*altura) - (4.7*edad);
+	return r;
+}
+float caloriasmujer(float ritmobasalmujer)
+{
+	float c;
+	c = ritmobasalmujer;
+	return c;
+}
