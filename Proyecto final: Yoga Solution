@@ -3,7 +3,8 @@
 //Tema: PROYECTO FINAL: Yoga Solution
 //Materia: INTRODUCCION A LA PROGRAMACION
 //Docente Guia: Mgs. Karem Infantas Soto
-// 
+// Nota: Profe, el avance del proyecto lo subi el sábado 28 de noviembre (el ultimo dia de entrega), o sea aun estaba incompleto y hace 3 dias (12 de diciembre) subi el proyecto completo a mi cuenta de github.
+
 #include "stdafx.h"
 #include <iostream>
 #include "conio.h"
