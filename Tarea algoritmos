@@ -1,0 +1,122 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+bool numeroprimo(int n)
+{
+	int i;
+	bool k = true;
+	for (i = 2; i < n; i++) {
+		if (n%i == 0)
+			k = false;
+	}
+
+	return(k);
+}
+
+int invertirnumero(int newnro){
+	int n = 0, d;
+	while (newnro>0) {
+		d = newnro % 10;
+		n = n * 10 + d;
+		newnro = newnro / 10;
+	}
+	return(n);
+}
+
+int eliminarimpar(int n)
+{
+	int d, newnro = 0;
+	while (n > 0) {
+		d = n % 10;
+		if (d % 2 == 0) {
+			newnro = newnro * 10 + d;
+		}
+		n = n / 10;
+	}
+	return(invertir(newnro));
+}
+
+
+bool digordenar(int n)
+{
+	int digAnt = n % 10, digAct;
+	bool k = true;
+	n = n / 10;
+	while (n > 0) {
+		digAct = n % 10;
+		if (digAct > digAnt) {
+			k = false;
+		}
+		digAnt = digAct;
+		n = n / 10;
+	}
+	return(k);
+}
+
+int eliminarnoordenados(int n)
+{
+	//algo
+}
+
+
+void main()
+{
+	int opcion, nro, r;
+	do {
+		cout << "Introduzca numero Natural: " << endl << endl;
+		cin >> nro;
+		if (nro <= 0)
+		{
+			cout << endl << "ERROR El Numero debe ser un numero natural..." << endl << endl;
+		}
+
+	} while (nro <= 0);
+	do {
+		cout << "\t\t MENU \n" << endl;
+		cout << "\t =================== \n" << endl;
+		cout << "1. Verificar numero primo " << endl;
+		cout << "2. Eliminar digitos impares " << endl;
+		cout << "3. Ordenar digitos en forma ascendente" << endl;
+		cout << "4. Eliminar digitos no ordenados" << endl;
+		cout << "0. Salir" << endl << endl;
+		cout << "Opcion: " << endl << endl;
+		cin >> opcion;
+
+		switch (opcion)
+		{
+		case 1: if (numeroprimo(nro) == true)
+			cout << "El numero es primo" << endl;
+				else
+					cout << "El numero no es primo" << endl << endl;
+			break;
+
+		case 2: r = eliminarimpar(nro);
+			cout << "El numero es: " << r << endl << endl;
+			break;
+
+		case 3: r = digordenar(nro);
+			cout << "El numero es: " << r << endl << endl;
+			break;
+
+		case 4: r = eliminarnoordenados(nro);
+			cout << "El numero es: " << r << endl << endl;
+			break;
+
+		case 0: cout << "Saliendo..." << endl << endl;
+			break;
+
+		default: cout << "ERROR introduzca numero natural" << endl;
+			break;
+		}
+	} while (opcion != 0);
+	_getch();
+
+
+
+}
+
+
+
+
+
